@@ -19,25 +19,49 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
   line-height: 1;
   color: black;
-  background: white;
 }
 ol, ul {
   list-style: none;
 }
+
+a {
+  text-decoration: underline;
+  color: #2F3B43;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #2F3B43;
+}
+
+a:hover {
+text-decoration: underline;
+  color: #2F3B43;
+}
+
 a img {
   border: none;
 }
 
 html {
-  background: #eeeeee;
+  background: #F5F6F7;
 }
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.4em;
-    background: #eeeeee;
-    color: #333333;
+    background: #F5F6F7;
+    color: #2F3B43;
+    text-align: center;
   }
+
+p.notice {
+  color: #9BD8F4;
+}
+
+p.alert {
+  color: #D92726;
+}
 
 #todoapp {
   width: 480px;

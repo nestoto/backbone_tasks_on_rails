@@ -2,28 +2,28 @@ class TodosController < ApplicationController
   respond_to :json
 
   def index
-    render :json => Todo.all
+    render :json => curren_user.todos.all
   end
 
   def show
-    todo = Todo.find(params[:id])
+    todo = current_user.todos.find(params[:id])
     render :json => todo
   end
 
   def create
-    todo = Todo.create! params[:todo]
+    todo = current_user.todos.create! params[:todo]
     render :json => todo
   end
 
   def update
-    todo = Todo.find(params[:id])
+    todo = current_user.todos.find(params[:id])
     params[:todo].delete("id")
     todo.update_attributes! params[:todo]
     render :json => todo
   end
 
   def destroy
-    todo = Todo.find(params[:id])
+    todo = current_user.todos.find(params[:id])
     todo.destroy
     render :json => todo
   end

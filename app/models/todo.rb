@@ -9,6 +9,9 @@ class Todo < ActiveRecord::Base
   #validates :done, :presence => true
 
 
+  belongs_to :user
+
+
   def to_json(options={})
     super(:only=>[:id, :content, :order, :done])
   end
