@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   respond_to :json
 
   def index
-    render :json => curren_user.todos.all
+    render :json => current_user.todos.all
   end
 
   def show
