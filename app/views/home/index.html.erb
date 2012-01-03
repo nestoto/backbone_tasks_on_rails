@@ -2,8 +2,23 @@
 <div id="todoapp">
   <div class="title">
     <h1>
-        Backbone Demo: Todos
+        Task List
     </h1>
+
+     <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+<nav>
+  <% if user_signed_in? %>
+    Welcome <%= current_user.email %>! <br/> Not you?
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+  <% end %>
+</nav>
+<br />
+<br />
+
   </div>
 
   <div class="content">
