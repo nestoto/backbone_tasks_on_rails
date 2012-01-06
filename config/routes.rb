@@ -1,5 +1,7 @@
 BackboneTasksOnRails::Application.routes.draw do
   
+  get "complete_todos/index"
+
   resources :todos
   devise_for :users
 

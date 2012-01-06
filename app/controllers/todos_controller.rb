@@ -24,7 +24,12 @@ class TodosController < ApplicationController
 
   def destroy
     todo = current_user.todos.find(params[:id])
-    todo.destroy
-    render :json => todo
+    complete_todo = current_user.complete_todos.create(:content => todo.content, :order => todo.order, :done => todo.done)
+    if complete_todo && complete_todo.save
+      todo.destroy
+      render :json => todo
+    else
+    end
+    
   end
 end

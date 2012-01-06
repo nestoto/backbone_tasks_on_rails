@@ -11,4 +11,8 @@ Factory.define :todo do |todo|
   todo.done                   false
 end
 
-
+Factory.define :complete_todos do |todo|
+  todo.content                "Eat Breakfast"
+  todo.order                  1
+  todo.done                   false
+end

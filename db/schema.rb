@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120103202557) do
+ActiveRecord::Schema.define(:version => 20120106183236) do
+
+  create_table "complete_tasks", :force => true do |t|
+    t.text     "content"
+    t.integer  "order"
+    t.boolean  "done"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "complete_todos", :force => true do |t|
+    t.text     "content"
+    t.integer  "order"
+    t.boolean  "done"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tasks", :force => true do |t|
     t.text     "content"
